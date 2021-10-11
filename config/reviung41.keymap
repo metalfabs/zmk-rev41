@@ -33,7 +33,7 @@
 // | ESC |  1  |  2   |  3   |  4   |  5  |   |  6  |  7   |  8   |  9   |  0  | DEL |
 // |     |     |      |      |      |     |   | LFT | DWN  | UP   | RGT  |     |     |
 // |     |     | LBRC | LBKT | LPAR |     |   |     | RPAR | RBKT | RBRC |     |     |
-//                       |     |     | SPC | ADJ  |     |
+//                           |     |     | SPC | ADJ  |     |
                         bindings = <
    &kp ESC &kp N1    &kp N2    &kp N3    &kp N4    &kp N5        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp DEL
    &trans  &trans    &trans    &trans    &trans    &trans        &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans    &trans
@@ -44,23 +44,23 @@
 
                 raise_layer {
 // ----------------------------------------------------------------------------------
-// | ESC |  !  |  @  |  #  |  $  |  %   |   |  ^  |  &  |  *  |  (  |  )  | DEL |
-// |  F1 | F2  | F3  | F4  |  F5 |  F6  |   |     |  -  |  =  |     | "|" |  `  |
-// |  F7 | F8  | F9  | F10 | F11 |  F12 |   |     |  _  |  +  |     |  \  |  ~  |
-//                        |     |  ADJ | SPC |     |     |
+// | ESC |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | DEL |
+// |     |  F1 | F2  | F3  | F4  |  F5 |   | F6  |  -  |  =  |  `  | "|" |     |
+// |     |  F7 | F8  | F9  | F10 | F11 |   | F12 |  _  |  +  |  ~  |  \  |     |
+//                      |     |  ADJ |  SPC  |     |     |
                         bindings = <
-   &kp ESC &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS  &kp STAR    &kp LPAR  &kp RPAR  &kp DEL
-   &trans  &kp F1   &kp F2 &kp F3   &kp F4   &kp F5         &kp F6    &kp MINUS &kp EQUAL &trans    &kp PIPE  &kp GRAVE
-   &trans  &kp F7   &kp F8 &kp F9   &kp F10  &kp F11        &kp F12    &kp UNDER &kp PLUS  &trans    &kp BSLH  &kp TILDE
+   &kp ESC &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp DEL
+   &trans  &kp F1   &kp F2 &kp F3   &kp F4   &kp F5         &kp F6    &kp MINUS &kp EQUAL &kp GRAVE &kp PIPE  &trans
+   &trans  &kp F7   &kp F8 &kp F9   &kp F10  &kp F11        &kp F12   &kp UNDER &kp PLUS  &kp TILDE &kp BSLH  &trans
                             &trans      &mo 3       &kp SPACE        &trans       &trans
                         >;
                 };
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
-// | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ | RGB TOG |         | BT 0  |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
-// | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI+ |         |         |       |       |     |     |     |     |        |
-// |          |          |          |          |         |         | RESET | BOOT  |     |     |     |     |        | 
-//                                            |     |     | SPACE  |     |     |
+// | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ | RGB TOG |      | BT 0  |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
+// | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI+ |         |      |       |       |     |     |     |     |        |
+// |          |          |          |          |         |      | RESET | BOOT  |     |     |     |     |        | 
+//                                          |     |     | SPACE  |     |     |
                         bindings = <
    &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &none &rgb_ug RGB_TOG    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
    &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none &none              &none        &none        &none        &none        &none        &none
