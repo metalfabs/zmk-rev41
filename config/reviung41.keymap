@@ -21,10 +21,10 @@
 // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT(RET) |
 //                         | ALT | LWR | SPC | RSE  | GUI |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LSHFT &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
-                        &kp LALT  &lt 1 ESC &kp SPACE &lt 2 DEL &kp LGUI 
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp LSHFT &kp A &kp S &kp D &kp F &kp G    &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LCTRL &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
+                  &kp LALT  &lt 1 ESC &kp SPACE &lt 2 DEL &kp LGUI 
                         >;
                 };
 
@@ -34,7 +34,7 @@
 // | ESC |  1  |  2   |  3    |  4    |  5  |   |  6  |  7   |  8   |  9   |  0  | DEL |
 // |     |     | HOME | PG_DN | PG_UP | END |   | LFT | DWN  | UP   | RGT  |     |     |
 // |     |     | LBRC | LBKT  | LPAR  |     |   |     | RPAR | RBKT | RBRC |     |     |
-//                      |     |     |  SPC  | ADJ  |     |
+//                       |     |     |  SPC  | ADJ  |     |
                         bindings = <
    &kp ESC &kp N1    &kp N2    &kp N3    &kp N4    &kp N5        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &trans
    &trans  &trans    &kp HOME  &kp PG_DN &kp PG_UP &kp END       &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &trans    &trans
@@ -58,15 +58,15 @@
                 };
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
-// | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ | RGB TOG |      | BT 0  |  BT1  | BT2  | BT3  | BT4 | BT5 | BT CLR |
-// | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI+ |         |      | PREV  | PAUSE | PLAY | NEXT |     |     |        |
-// |          |          |          |          |         |      | RESET | BOOT  | ROFF | RON  |     |     |        | 
-//                                         |     |     |  SPACE  |     |     |
+// | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ | RGB SPD+ | RGB TOG |      | BT 0  |  BT1  | BT2     | BT3  | BT4 | BT5 | BT CLR |
+// | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI+ | RGB SPD- | PWR TOG |      | PREV  | PAUSE | PLAY    | NEXT |     |     |        |
+// |          |          |          |          |          |         |      | RESET | BOOT  | OUT TOG |      |     |     |        | 
+//                                                     |     |     |  SPACE  |     |     |
                         bindings = <
-   &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &none &rgb_ug RGB_TOG    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2      &bt BT_SEL 3     &bt BT_SEL 4 &bt BT_CLR
-   &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none &none              &kp K_PREV   &kp K_STOP2  &kp K_PP          &kp K_NEXT       &none        &none
-   &none           &none           &none           &none           &none &none              &reset       &bootloader  &ext_power EP_OFF &ext_power EP_ON &none        &none
-                                                       &trans      &trans       &kp SPACE     &trans      &trans
+   &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &rgb_ug RGB_SPI &rgb_ug RGB_TOG      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
+   &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &rgb_ug RGB_SPD &ext_power EP_TOG    &kp C_PREV   &kp C_STOP   &kp C_PP     &kp C_NEXT   &none        &none
+   &none           &none           &none           &none           &none           &none                &reset       &bootloader  &out OUT_TOG &none        &none        &none
+                                                                     &trans      &trans         &kp SPACE     &trans      &trans
                         >;
                 };
         };
